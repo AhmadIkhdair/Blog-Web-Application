@@ -52,6 +52,8 @@ Please note that this project is still a work in progress; I'll be actively comm
 node index.js
 ```
 
+Visit http://localhost:3000 in your web browser to view the application.
+
 ## Authors
 
 Ahmad Ikhdair 
