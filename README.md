@@ -4,7 +4,7 @@ BlogBuddy, Discover Your Digital Voice.
 
 ## Description
 
-This is a modsmallest project aimed at honing my backend skills. Developed with Node.js, Express, and EJS, with Bootstrap aiding in layout and some custom CSS for personal touches. 
+This is a small project aimed at honing my backend skills. Developed with Node.js, Express, and EJS, with Bootstrap aiding in layout and some custom CSS for personal touches. 
 
 The application will allow users to create and view blog posts. Posts will not persist between sessions as no database will be used in this version of the application. 
 
