@@ -1,0 +1,202 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+/* :root {
+  --primary-color: #B4B4B8;
+  --background-color: #E3E1D9; 
+  --accent-color: #F2EFE5; 
+  --secondary-color: #C7C8CC; 
+  --text-color: #333;  
+} */
+body {
+  background-color: white;
+}
+nav {
+  background-color: gainsboro
+}
+footer {
+  background-color: gainsboro;
+}
+
+/**------------hero------------*/
+.hero {
+  background-color: white;
+}
+
+/**------------app box------------*/
+.app-box{
+  background-color: white;
+}
+
+/**------------BLOGS container------------*/
+.all-blogs {
+  overflow-y: scroll;
+  height: 75vh;
+}
+
+/**------------POPUPS------------*/
+/* Popup Blog container */
+.blog { 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 400ms ease-in-out;
+  border: 1px solid var(--primary-color);
+  border-radius: 20px;
+  z-index: 10;
+  background-color: white;
+  width: 800px;
+  max-width: 80%;
+  height: 80vh;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+/* Popup Blog inner container */
+.blog-content {
+  z-index: 10;
+  padding: 20px; 
+  box-sizing: border-box;
+  overflow-y: scroll;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* Popup Blog Activated */
+.blog.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+/* Popup Blog Header Container (Title + Close button) */
+.blog-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+.blog-header .title {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+.author {
+  align-self: flex-start;
+  margin: 0;
+}
+.blog-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+/* Popup Blog Image & Content*/
+.popup-image{
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 10px 0px;
+}
+.blog-body {
+  font-size: 16px;
+}
+/* Overlay */
+#screen {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+  z-index: 2;
+}
+/* Overlay Activated */
+#screen.active {
+  opacity: 1;
+  pointer-events: all;
+}
+/* View Blog Button */
+.view-blog {
+  width: 100px;
+}
+
+/**------------BLOG CARDS------------*/
+/* Blog Image*/
+.blog-image {
+  width: 100%;
+  max-width: 300px;
+  height: 100%;
+}
+p.card-text.my-4 {
+  max-width: 377.325px;
+}
+
+/**------------POST FORM------------*/
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.blog-content.form{
+  align-items: flex-start;
+}
+label{
+  margin: 5px 0px;
+}
+input {
+  margin: 5px 0px;
+}
+input[name="title"] {
+  width: 300px;
+}
+input[name="author"] {
+  width: 300px;
+}
+textarea[name="content"] {
+  resize: none;
+}
+input[type="submit"] {
+  color: black;
+}
+select {
+  display: none;
+}
+/* Choose topic */
+.topic {
+  padding: 15px 0px;
+  border: 1px gainsboro solid;
+  border-radius: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.topic img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+}
+.topic p {
+  margin: 0;
+  text-align: center;
+}
+.topc > div {
+  display: flex;
+  flex-direction: column;
+}
+.form img:hover {
+  cursor: pointer;
+}
+.selected {
+  color: red;
+}
+
+@media (max-width : 1200px) {
+  p.card-text.my-4 {
+    max-width: 100%;
+  }
+}

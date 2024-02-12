@@ -1,0 +1,72 @@
+<%- include("partials/header.ejs") %>
+
+<!-- Hero -->
+<%- include("partials/hero.ejs") %>
+
+  <!--! BLOGS -->
+  <div class="row g-5 mt-3 app-box">
+    <div class="col-md-8">
+      <h1 class="pb-4 mb-4 fst-italic border-bottom">
+        Explore Blogs
+      </h1>
+      <div class="all-blogs">
+      <!-- Create Blog -->
+      <% if (locals.blogTitle) { %>
+        <div class="col-md-12">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <h3 class="mb-0"><%= blogTitle %></h3>
+              <div class="mt-2 text-body-secondary">Posted by <%= blogAuthor %></div>
+              <% var subContent = blogContent.substring(0, 150); %>
+              <p class="card-text my-4"><%= subContent %>...</p>
+              <!-- Blog -->
+              <button data-blog-target="#blogX" class="icon-link gap-1 view-blog">Open blog </button>
+              <div class="blog" id="blogX">
+                  <div class="blog-content">
+                      <div class="blog-header">
+                        <div class="title"><%= blogTitle %></div>
+                        <button data-close-button class="close-button">&times;</button>
+                      </div>
+                      <p class="author">Posted by: <%= blogAuthor %></p>
+                      <% if (blogType === 'option1') { %>
+                        <img src="images/morning-routine.jpg" alt="blog-image" class="popup-image">
+                      <%} else if (blogType === 'option2') { %>
+                        <img src="images/instructional.png" alt="blog-image" class="popup-image">
+                      <%} else { %>
+                        <img src="images/review.png" alt="blog-image" class="popup-image">
+                      <% } %>
+                      <div class="blog-body">
+                        <%= blogContent %>
+                      </div>
+                  </div>
+              </div>
+              <div id="screen"></div>
+              <!-- Blog -->
+            </div>
+            <div class="col-auto d-none d-xl-block">
+              <% if (blogType === 'option1') { %>
+                <img src="images/morning-routine.jpg" alt="blog-image" class="blog-image">
+              <%} else if (blogType === 'option2') { %>
+                <img src="images/instructional.png" alt="blog-image" class="blog-image">
+              <%} else { %>
+                <img src="images/review.png" alt="blog-image" class="blog-image">
+              <% } %>
+            </div>
+          </div>
+        </div>
+    <% } %>
+    
+    <!-- Blogs in page-->
+    <%- include("partials/blogs.ejs") %>   
+
+    <!--Post Blogs Form-->
+    <%- include("partials/postblog.ejs") %>
+        
+    <!--Recent Posts-->
+    <%- include("partials/recent.ejs") %>
+
+        </div>
+      </div>
+    </div>
+
+<%- include("partials/footer.ejs") %>

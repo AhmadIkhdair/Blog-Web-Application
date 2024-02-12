@@ -1,0 +1,50 @@
+<!-- Post a blog -->
+<div class="col-md-4">
+    <div class="" style="top: 2rem;">
+      <div class="p-4 mb-3 bg-body-tertiary rounded">
+        <h4 class="fst-italic">Post a blog!</h4>
+        <p class="mb-0">Unleash your creativity and share your unique voice by contributing your own compelling stories and insights. It's time for your words to take center stage. Start posting now!.</p>
+        
+        <button data-blog-target="#postblog" class="icon-link gap-1 view-blog">Post a blog </button>
+            <div class="blog" id="postblog">
+                <div class="blog-content form">
+                  <div class="blog-header">
+                    <div class="title">Create your own blog!</div>
+                    <button data-close-button class="close-button">&times;</button>
+                  </div>
+                    <form action="/submit" method="POST">
+                        <label for="title">Blog Title</label>
+                        <input type="text" name="title" placeholder="Title">
+                        
+                        <div class="topic">
+                          <div class="lifestyle">
+                            <img src="images/morning-routine.jpg" alt="">
+                            <p>Personal / Lifestyle</p>
+                          </div>
+                          <div class="instructional">
+                            <img src="images/instructional.png" alt="">
+                            <p>How-to / Instructional</p>
+                          </div>
+                          <div class="review">
+                            <img src="images/review.png" alt="">
+                            <p>Review / Product</p>
+                          </div>
+                        </div>
+                        <select id="dropdown" name="dropdown">
+                            <option value="option1">Personal / lifestyle</option>
+                            <option value="option2">How-to / Instructional</option>
+                            <option value="option3">Review / Product</option>
+                        </select>
+                    
+                        <label for="author">Name</label>
+                        <input type="text" name="author" placeholder="Name">
+
+                        <label for="content">Content</label>
+                        <textarea name="content" placeholder="Write your blog post here" rows="5"></textarea>
+
+                        <input type="submit" value="Submit">
+                    </form>                            
+                </div>
+            </div>
+        <div id="screen"></div>
+      </div>
