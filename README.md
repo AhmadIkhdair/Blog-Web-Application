@@ -1,6 +1,6 @@
-# Project Title
+# Blog Web Application
 
-Blog Web Application Project, BlogBuddy.
+BlogBuddy, Discover Your Digital Voice.
 
 ## Description
 
