@@ -13,7 +13,6 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
 // Your routes will go here
-// Example routes
 app.get('/', (req, res) => {
     res.render('index.ejs'); // Create an 'index.ejs' file in the 'views' folder
   });
